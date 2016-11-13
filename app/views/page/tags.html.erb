@@ -1,4 +1,4 @@
-<h1>Instagram Lookup "<%= @tag_searched %>"</h1>
+<h1>Instagram e a tag que você buscou: "<%= @tag_searched %>"</h1>
 <%= if @medias.count < 1 then "Não encontrado mídias recentes para esta tag" end %>
 <% @medias.each do |media| %>
 <p><%= image_tag media.images.thumbnail.url %></p>
