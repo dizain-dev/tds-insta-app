@@ -1,0 +1,12 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<h1>Entre e conecte-se</h1>
+			<%= flash[:error] %>
+			<%= form_tag({controller: "page", action: "connect"}, method: "post") do %>	
+			<%= text_field_tag(:tag_choice, nil, placeholder: "Tag que deseja") %>
+			<%= submit_tag("Enviar") %>
+			<% end %>
+		</div>
+	</div>
+</div>

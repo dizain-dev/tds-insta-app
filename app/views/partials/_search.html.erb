@@ -1,0 +1,5 @@
+<h3>Buscar outra tag</h3>
+<%= form_tag({action: "taginfo", controller: "page"}, method: "post") do %>
+<%= text_field_tag(:new_tag, params[:new_tag], placeholder: "BUscar tag") %>
+<%= button_tag 'Buscar' %>
+<% end %>
