@@ -24,6 +24,6 @@ class PageController < ApplicationController
 	end
 	private
 	def set_calback_url
-		callback_url = "http://localhost:3000/callback"
+		callback_url = "https://tds-insta-app.herokuapp.com/callback"
 	end
 end
