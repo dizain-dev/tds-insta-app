@@ -1,8 +1,20 @@
-<h1>Instagram e a tag que você buscou: "<%= @tag_searched %>"</h1>
-<%= if @medias.count < 1 then "Não encontrado mídias recentes para esta tag" end %>
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+	    <div class="panel-heading"><h1>Instagram e a tag que você buscou: "<%= @tag_searched %>"</h1></div>
+	 
+	    	<%= if @medias.count < 1 then "Não encontrado mídias recentes para esta tag" end %>
 <% @medias.each do |media| %>
+<div class="panel-body">
 <p><%= image_tag media.images.thumbnail.url %></p>
-<p>De <strong><%= media.user.username %></strong>, em <%= Time.strptime(media.created_time.to_s,'%Q') %></p>
+<p>De <strong><%= media.user.username %></strong>, em <%= Time.at(media.created_time.to_i ).strftime("%d/%m/%Y às %Hh%M") %></p>
 <p><%= media.caption.text %></p>
+</div>
 <% end %>
-<%= render 'partials/search' %>
+
+<%= render 'partials/search' %>		
+	    
+  </div>
+		
+	</div>
+</div>
